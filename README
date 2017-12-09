@@ -20,6 +20,6 @@ Try this
 
 # How to use
 ```
-virtualenv -p /usr/bin/python2.7 --no-site-packages ENV27
-pip install -r requirement.txt
+source ENV27/bin/activate
+python main.py
 ```
