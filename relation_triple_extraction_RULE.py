@@ -3,7 +3,6 @@
 """
 文本中事实三元组抽取
 import LTPExtractTriple
-MODELDIR = "/home/tgs/Downloads/ToYou/ltp-data-v3.3.1/ltp_data/"
 MODELDIR = "ltp-data-v3.3.1/ltp_data/"
 LTPExtractTripleInstance = LTPExtractTriple(MODELDIR)
 result = LTPExtractTripleInstance.pack(["中共中央政治局12月8日下午就实施国家大数据战略进行第二次集体学习。","我们应该审时度势、精心谋划、超前布局、力争主动，深入了解大数据发展现状和趋势及其对经济社会发展的影响"])
