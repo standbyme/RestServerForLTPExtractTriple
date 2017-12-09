@@ -22,6 +22,9 @@ Try this
 ` sudo apt-get install python-dev python3-dev `
 
 # How to use
+1. Correct the MODELDIR in config.py
+
+2. Run the REST server
 ```
 source ENV27/bin/activate
 python main.py

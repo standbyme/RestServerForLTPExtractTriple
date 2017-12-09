@@ -1,0 +1,1 @@
+MODELDIR = "/home/tgs/Downloads/ToYou/ltp-data-v3.3.1/ltp_data/"

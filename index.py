@@ -5,14 +5,12 @@ from flask_restful import Resource, Api, reqparse
 from flask_cors import CORS
 
 from relation_triple_extraction_RULE import LTPExtractTriple
-
+from config import MODELDIR
 import urllib
 
 app = Flask(__name__)
 CORS(app)
 api = Api(app)
-
-MODELDIR = "/home/tgs/Downloads/ToYou/ltp-data-v3.3.1/ltp_data/"
 
 class HelloWorld(Resource):
     def post(self):
