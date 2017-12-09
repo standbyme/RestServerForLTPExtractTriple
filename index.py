@@ -12,21 +12,18 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
+MODELDIR = "/home/tgs/Downloads/ToYou/ltp-data-v3.3.1/ltp_data/"
 
 class HelloWorld(Resource):
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('UserInput', type=str, help='UserInput')
         args = parser.parse_args()
-        result = [{"HeadEntity": "小绵羊",
-                   "Relation": "吃",
-                   "TailEntity": "草",
-                   "SentenceStructure": "益智游戏"},
-                  {"HeadEntity": "小绵羊小绵羊小绵羊小绵羊小绵羊小绵羊小绵羊小绵羊",
-                   "Relation": "吃",
-                   "TailEntity": "草",
-                   "SentenceStructure": "益智游戏"}]
-        # {'Result': urllib.unquote(args['UserInput']).split('\n')}
+        UserInput = urllib.unquote(args['UserInput']).split('\n')
+
+        LTPExtractTripleInstance = LTPExtractTriple(MODELDIR)
+        result = LTPExtractTripleInstance.pack(UserInput)
+
         return {'Result': result}
 
 
