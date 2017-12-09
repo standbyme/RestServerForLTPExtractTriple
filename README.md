@@ -5,6 +5,7 @@
 
 ```shell
 virtualenv -p /usr/bin/python2.7 --no-site-packages ENV27
+source ENV27/bin/activate
 pip install -r requirement.txt
 ```
 
