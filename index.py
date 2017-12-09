@@ -13,9 +13,9 @@ api = Api(app)
 class HelloWorld(Resource):
     def post(self):
         parser = reqparse.RequestParser()
-        parser.add_argument('idd', type=str, help='Rate to charge for this resource')
+        parser.add_argument('UserInput', type=str, help='UserInput')
         args = parser.parse_args()
-        return {'hello': urllib.unquote(args['idd'])}
+        return {'Result': urllib.unquote(args['UserInput']).split('\n')}
 
 
 api.add_resource(HelloWorld, '/')
