@@ -4,6 +4,8 @@ from flask import Flask
 from flask_restful import Resource, Api, reqparse
 from flask_cors import CORS
 
+from relation_triple_extraction_RULE import LTPExtractTriple
+
 import urllib
 
 app = Flask(__name__)
