@@ -12,6 +12,8 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
+LTPExtractTripleInstance = LTPExtractTriple(MODELDIR)
+
 class LTPExtractTripleAPI(Resource):
     def post(self):
         parser = reqparse.RequestParser()
@@ -19,7 +21,6 @@ class LTPExtractTripleAPI(Resource):
         args = parser.parse_args()
         UserInput = urllib.unquote(args['UserInput']).split('\n')
 
-        LTPExtractTripleInstance = LTPExtractTriple(MODELDIR)
         result = LTPExtractTripleInstance.pack(UserInput)
 
         return {'Result': result}
