@@ -30,4 +30,4 @@ Try this
 source ENV27/bin/activate
 python index.py
 ```
-**Port default 5000**
+**Port default 1234**

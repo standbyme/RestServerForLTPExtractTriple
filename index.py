@@ -12,7 +12,7 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
-class HelloWorld(Resource):
+class LTPExtractTriple(Resource):
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('UserInput', type=str, help='UserInput')
@@ -25,7 +25,7 @@ class HelloWorld(Resource):
         return {'Result': result}
 
 
-api.add_resource(HelloWorld, '/')
+api.add_resource(LTPExtractTriple, '/')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=1234)
