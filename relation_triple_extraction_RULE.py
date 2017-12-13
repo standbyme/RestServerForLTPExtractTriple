@@ -344,7 +344,8 @@ class LTPExtractTriple:
         SentenceStructure = temp[0]
         HeadEntity, Relation, TailEntity = temp[1].lstrip(
             '(').rstrip(')').split(',')
-        return {"HeadEntity": HeadEntity, "Relation": Relation, "TailEntity": TailEntity, "SentenceStructure": SentenceStructure}
+        SSID = temp[3]
+        return {"Triple":{"HeadEntity": HeadEntity, "Relation": Relation, "TailEntity": TailEntity}, "SentenceStructure": SentenceStructure,"SSID":SSID}
 
 
     def pack(self,raw_str_list):
