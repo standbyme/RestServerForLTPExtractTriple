@@ -344,7 +344,7 @@ class LTPExtractTriple:
         SentenceStructure = temp[0]
         HeadEntity, Relation, TailEntity = temp[1].lstrip(
             '(').rstrip(')').split(',')
-        SSID = temp[3]
+        SSID = int(temp[3])
         return {"Triple":{"HeadEntity": HeadEntity, "Relation": Relation, "TailEntity": TailEntity}, "SentenceStructure": SentenceStructure,"SSID":SSID}
 
 
